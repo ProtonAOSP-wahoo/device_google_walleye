@@ -26,16 +26,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
 # Inherit product speciifc makefiles
 $(call inherit-product, device/google/walleye/device.mk)
 $(call inherit-product, vendor/google/walleye/walleye-vendor.mk)
 
+WITH_GMS := true
+
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := lineage_walleye
+PRODUCT_NAME := aosp_walleye
 PRODUCT_DEVICE := walleye
 PRODUCT_MODEL := Pixel 2
 
